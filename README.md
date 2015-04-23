@@ -57,7 +57,7 @@ CREDITS and ACKNOWLEDGEMENTS
 www.google.com
 
 
-CHANGELOG
+CHANGE LOG
 ---------
 N/A
 
