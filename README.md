@@ -69,3 +69,6 @@ Claudia Ventresca
 
 CONTACT INFORMATION
 -------------------
+Feel free to contact me via this github account to disucuss potential business
+opportunities.
+
