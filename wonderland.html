@@ -1,0 +1,65 @@
+<html>
+<head>
+<title> Sample Parallax Scrolling for Client </title>
+
+<style type="text/css">
+@import "magicStyle.css";
+</style>
+<script type="text/javascript" src="js/jquery.js" ></script>
+<script type="text/javascript" src="js/jquery-ui.js" ></script>
+<script type="text/javascript" >
+
+
+$(function(){
+	start_content = '<div class="text">Start Here...</div>';
+	learn_content = '<div class="text">About Us...</div>';
+	contact_content = '<div class="text">Say Hello...</div>';
+	
+	function theContent(id)
+	{
+		if(id=='Start') { html_txt = start_content; }
+		if(id=='Learn') { html_txt = learn_content; }
+		if(id=='Contact') { html_txt = contact_content; }
+		$('#info').html(html_txt);			
+	}
+	
+	function sun()
+	{	
+		$('#sun').animate({top:'350px', left: '50px'},9000);
+		$('#sun,#info').clearQueue();
+	}
+
+	$('.animate').click(function(){
+		var random_number = Math.floor(Math.random()*500);
+		var id = $(this).attr('id');
+		$('#sun,#info').clearQueue();
+		$('#sun').animate({ top: '-780px', left: random_number },3000,function(){ theContent(id); }).delay(3000).animate({ top: '350px', left: 50 },3000);
+		$('#cloud').animate({backgroundPosition:  ['-=120px', 'easeInOutSine']},1000);	
+		$('#nyc').animate({backgroundPosition:  '-=580px'},1000);
+		$('#info').animate({right: ['-550px', 'easeInOutSine']}).delay(3000).animate({ right: '50px' },3000);
+	});
+	theContent('Start');
+	sun();
+});
+
+</script>
+</head>
+<body>
+<div id="wrapper">
+	
+	<div id="menubar">
+		<ul>
+			<li id="Start" class="animate" >Welcome</li>
+			<li id="Learn" class="animate">Learn</li>
+			<li id="Contact" class="animate">Contact</li>
+		</ul>
+	</div> <!-- #menubar -->
+		
+	<img id="sun" src="images/sun.png">
+	<div id="cloud"></div>
+	<div id="info"></div>
+	<div id="nyc"></div>
+
+</div> <!-- #wrapper -->
+</body>
+</html>

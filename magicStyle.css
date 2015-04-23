@@ -1,0 +1,99 @@
+
+body {
+	background: #007DC5;
+	padding: 0;
+	margin: 0;
+	font: normal 15px Arial;
+}
+#wrapper {
+	height: 100%;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+#message {
+	z-index: 12;
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+}
+#message a {
+	text-decoration: none;
+	color: #fff;
+	font: bold 20px arial;
+	padding:5px 12px;
+	background: #d246db;
+	border-radius: 5px;
+}
+#menubar {
+	width: 450px;
+	height: 120px;
+	background: url(images/menu.png) no-repeat left bottom;
+	border: 0px solid red;
+	text-align: center;
+	position: absolute;
+	top: 0px;
+	left: 25%;
+	z-index: 99;
+}
+#menubar ul {
+	width: 90%;
+	margin: auto;
+	list-style: none;
+}
+@font-face {
+ font-family: WORDSOFLOVE;
+ src: url("fonts/WORDSOFLOVE.ttf") /* TTF file for CSS3 browsers */
+}
+#menubar li{
+	font: bold 21px WORDSOFLOVE;
+	color: #ff3333;
+	float: left;
+	padding: 0px 20px;
+	line-height: 50px;
+	cursor: pointer;
+}
+#cloud {
+	width:100%;
+	height: 328px;
+	position: absolute;
+	top: -10px; 
+	left: 0px;
+	background: transparent url(images/cloud.png) bottom left repeat-x;
+	z-index:-1;
+}
+#nyc {
+	width: 100%;
+	height: 186px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: transparent url(images/nyc.png) bottom left repeat-x;
+	z-index: 5;
+}
+#sun {
+	position: absolute;
+	top: -550px;
+	left: -250px;
+	z-index: 3;
+}
+@font-face {
+ font-family: WORDSOFLOVE;
+ src: url("WORDSOFLOVE.ttf") /* TTF file for CSS3 browsers */
+}
+#info{
+	background: transparent url(images/unicorn.png) no-repeat center;
+	font: normal 29px WORDSOFLOVE;
+	color: #000;
+	position: absolute;
+	top: 250px; 
+	right: 50px;
+	width: 518px;
+	height: 285px;
+	z-index: 6;
+	text-align: center;
+}
+.text {
+	color: #009933;
+	line-height: 285px;
+}
